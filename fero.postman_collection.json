@@ -76,14 +76,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/survey/S105/open",
+					"raw": "localhost:8000/survey/S101/open",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"survey",
-						"S105",
+						"S101",
 						"open"
 					]
 				}
@@ -219,14 +219,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8000/survey/S105/show-report/",
+					"raw": "localhost:8000/survey/S101/show-report/",
 					"host": [
 						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"survey",
-						"S105",
+						"S101",
 						"show-report",
 						""
 					]
