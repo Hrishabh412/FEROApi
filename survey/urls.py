@@ -1,14 +1,17 @@
-from django.shortcuts import render
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import SimpleRouter
 
-# Create your views here.
-from .views import  UserGenericAPIView, QuestionGenericAPIView, AnswerGenericAPIView, SurveyGenericAPIView, Survey_report
+from .views import (
+    UserGenericAPIView, QuestionGenericAPIView, AnswerGenericAPIView,
+    SurveyGenericAPIView
+)
+
+router = SimpleRouter()
+router.register('user', UserGenericAPIView, 'user')
+router.register('question', QuestionGenericAPIView, 'question')
+router.register('answer', AnswerGenericAPIView, 'answer')
+router.register('survey', SurveyGenericAPIView, 'survey')
 
 urlpatterns = [
-    #path('student_details/<int:pk>', student_detail),
-    path('user/', UserGenericAPIView.as_view()),
-    path('question/', QuestionGenericAPIView.as_view()),
-    path('answer/', AnswerGenericAPIView.as_view()),
-    path('survey/', SurveyGenericAPIView.as_view()),
-    path('report/<str:pk>/', Survey_report),
-    ]
+    path('', include(router.urls))
+]

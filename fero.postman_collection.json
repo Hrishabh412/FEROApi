@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "e9b64c82-049a-4ea3-b7fc-ad7fb2949163",
+		"name": "fero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userid\": \"U105\",\n    \"username\": \"Rishabh5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "survey",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/survey",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"survey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "survey open",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/survey/S105/open",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"survey",
+						"S105",
+						"open"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "questions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questionid\": \"Q114\",\n    \"question\": \"Q6\",\n    \"surveyid\": \"S101\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/question/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"question",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "questions list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/question/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"question",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "answers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/answer/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"answer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "answers submit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"answerid\": \"A1011\",\n    \"answer\": \"this is my answer\",\n    \"userid\": \"U103\",\n    \"questionid\": \"Q106\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/answer/submit/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"answer",
+						"submit",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create survey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"surveyid\": \"S105\",\n    \"surveystart\": \"2021-08-27T16:56:04Z\",\n    \"surveyend\": \"2021-08-27T17:56:07Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/survey/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"survey",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/survey/S105/show-report/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"survey",
+						"S105",
+						"show-report",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "Rishabh",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
