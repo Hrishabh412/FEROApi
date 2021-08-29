@@ -41,7 +41,6 @@ class UserGenericAPIView(ModelViewSet):
     authentication_classes = [BasicAuthentication]
     permission_classes = [IsAuthenticated]
 
-
 class AnswerGenericAPIView(ModelViewSet):
     serializer_class = AnswerSerializer
     queryset = Answer.objects.all()
